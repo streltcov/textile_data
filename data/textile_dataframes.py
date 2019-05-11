@@ -14,6 +14,10 @@ def convert_to_float(value):
     return value
 
 
+def density_coefficient(dataframe):
+    return dataframe
+
+
 # Основной датафрейм; Содержит все (неотфильтрованные) данные;
 dataframe = pandas.read_csv('raw_data/dataframe.csv')
 dataframe = pandas.DataFrame(dataframe[
@@ -38,6 +42,9 @@ dataframe['weft_mean'] = round((dataframe['weft_a'] + dataframe['weft_b']) / 2, 
 
 # "Коэффициент плотности" - соотношение плотности по основе к плотности по утку;
 dataframe['density_coefficient'] = round(dataframe['warp_dens'] / dataframe['weft_dens'], 2)
+
+# удаление строк с пропущенными и нулевыми значениями;
+dataframe = dataframe.dropna()
 
 
 # Выборка данных из подготовленного датафрейма;
