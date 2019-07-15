@@ -32,7 +32,7 @@ def density_coefficient(dataframe):
 # Основной датафрейм; Содержит все (неотфильтрованные) данные;
 dataframe = pandas.read_csv('raw_data/dataframe.csv')
 dataframe = pandas.DataFrame(dataframe[
-                                 ['grave', 'internal_storage', 'size_warp', 'size_weft', 'type', 'condition',
+                                 ['grave', 'internal_storage', 'warp_size', 'weft_size', 'type', 'condition',
                                   'weaving_technique',
                                   'warp_material', 'weft_material', 'warp_dyed', 'weft_dyed', 'twist_warp',
                                   'twist_weft', 'angle_warp', 'angle_weft',
