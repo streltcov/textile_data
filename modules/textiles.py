@@ -17,21 +17,26 @@ def convert_to_float(value):
     value = round(float(value), 2)
     return value
 
+class TextilesBase:
+    """
+    """
+    __dataframe = None
+    __dataframe_length = None
+    
+    def __init__(self, filename):
+        """
+        """
+        self.__dataframe = pandas.read_csv(filename)
 
-class Textiles:
+
+class Textiles(TextilesBase):
     """
     Базовый класс модуля; Формирует pandas.Dataframe
     """
     __dataframe = None
     __dataframe_length = None
-    __warp_mean_quantile_1 = None
-    __warp_mean_quantile_3 = None
-    __weft_mean_quantile_1 = None
-    __weft_mean_quantile_3 = None
-    __warp_dens_quantile_1 = None
-    __warp_dens_quantile_3 = None
-    __weft_dens_quantile_1 = None
-    __weft_dens_quantile_3 = None
+    
+    __quantiles = None
 
     def __init__(self, filename):
         """
@@ -42,27 +47,6 @@ class Textiles:
         self.__density_coefficient()
         self.__dataframe.dropna()
         self.__quantiles()
-
-    def dataframe(self):
-        """
-        Возвращает основной датафрейм без филтрации по параметрам;
-        """
-        return self.__dataframe
-
-    def weaving_technique(self, technique):
-        """
-        Возвращает датафрейм, отфильтрованный по заданному типу
-        ткацкого переплетения;
-        """
-        return self.__dataframe[self.__dataframe['weaving_technique'] == technique]
-
-    def balanced(self):
-        """
-        Выборка данных из подготовленного датафрейма;
-        Предполагается, что для сбалансированных тканей разница между плотностью
-        по основе и плотностью по утку не должна превышать 3 единиц;
-        """
-        return self.__dataframe[abs(self.__dataframe['warp_dens'] - self.__dataframe['weft_dens']) <= 3]
 
     def item_type(self, item_type):
         """
@@ -77,11 +61,6 @@ class Textiles:
         по основе и плотностью по утку не должна превышать 3 единиц;
         """
         return self.__dataframe[abs(self.__dataframe['warp_dens'] - self.__dataframe['weft_dens']) > 3]
-
-    def quartile(self, feature, number):
-        """
-        Возвращает указанный квартиль для запрошенного параметра;
-        """
 
     def __format_features(self):
         """
@@ -113,22 +92,94 @@ class Textiles:
         self.__dataframe['density_coefficient'] = round(
             self.__dataframe['warp_dens'] / self.__dataframe['weft_dens'],
             2)
-
-    def __quantiles(self):
+    
+        def dataframe(self):
         """
-        Вычисляет квартили для численных параметров датафрейма;
+        Возвращает основной датафрейм без филтрации по параметрам;
+        """
+        return self.__dataframe
+
+    def weaving_technique(self, technique):
+        """
+        Возвращает датафрейм, отфильтрованный по заданному типу
+        ткацкого переплетения;
+        """
+        return self.__dataframe[self.__dataframe['weaving_technique'] == technique]
+
+    def balanced(self):
+        """
+        Выборка данных из подготовленного датафрейма;
+        Предполагается, что для сбалансированных тканей разница между плотностью
+        по основе и плотностью по утку не должна превышать 3 единиц;
+        """
+        return self.__dataframe[abs(self.__dataframe['warp_dens'] - self.__dataframe['weft_dens']) <= 3]
+    
+    def create_quantiles():
+        """
+        """
+        if is None self._quantiles:
+            self.__quantiles = Quantiles(self)
+    
+    def create_outliers():
+        """
+        """
+        if is None self.__outliers:
+            self.__outliers = Outliers(self)
+    
+    def quantiles():
+        """
+        """
+        if is not None self.quantiles:
+            return self._quantiles
+        raise QuantilesNotSetError()
+    
+    def outliers():
+        """
+        """
+        if is not None self.__outliers:
+            return self.__outliers
+        raise OutliersNotSetError()
+
+#     def __quantiles(self):
+#         """
+#         Вычисляет квартили для численных параметров датафрейма;
+#         """
+#         self.__warp_mean_quantile_1, self.__warp_mean_quantile_3 = self.__dataframe.warp_mean.quantile([0.25, 0.75])
+#         self.__weft_mean_quantile_1, self.__weft_mean_quantile_3 = self.__dataframe.weft_mean.quantile([0.25, 0.75])
+#         self.__warp_dens_quantile_1, self.__warp_dens_quantile_3 = self.__dataframe.warp_dens.quantile([0.25, 0.75])
+#         self.__weft_dens_quantile_1, self.__weft_dens_quantile_3 = self.__dataframe.weft_dens.quantile([0.25, 0.75])
+
+#     def __textiles_descriptive(self):
+#         """
+#         """
+
+
+class Quantiles:
+    """
+    """
+    __warp_mean_quantile_1 = None
+    __warp_mean_quantile_3 = None
+    __weft_mean_quantile_1 = None
+    __weft_mean_quantile_3 = None
+    __warp_dens_quantile_1 = None
+    __warp_dens_quantile_3 = None
+    __weft_dens_quantile_1 = None
+    __weft_dens_quantile_3 = None
+    
+    def __init__(self, textiles: Textiles):
+        """
         """
         self.__warp_mean_quantile_1, self.__warp_mean_quantile_3 = self.__dataframe.warp_mean.quantile([0.25, 0.75])
         self.__weft_mean_quantile_1, self.__weft_mean_quantile_3 = self.__dataframe.weft_mean.quantile([0.25, 0.75])
         self.__warp_dens_quantile_1, self.__warp_dens_quantile_3 = self.__dataframe.warp_dens.quantile([0.25, 0.75])
         self.__weft_dens_quantile_1, self.__weft_dens_quantile_3 = self.__dataframe.weft_dens.quantile([0.25, 0.75])
-
-    def __textiles_descriptive(self):
+    
+    def quantile():
         """
         """
 
 
-class TextileOutliers:
+class Outliers:
     """
     Textiles outliers and basic statistics;
     """
