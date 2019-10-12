@@ -18,6 +18,8 @@ def convert_to_float(value):
     value = round(float(value), 2)
     return value
 
+########################################################################################################################
+
 
 class TextilesBase(ABC):
     """
@@ -80,6 +82,9 @@ class TextilesBase(ABC):
         return self._dataframe
 
 
+########################################################################################################################
+
+
 class Textiles(TextilesBase):
     """
     Базовый класс модуля; Формирует pandas.Dataframe
@@ -126,8 +131,8 @@ class Textiles(TextilesBase):
     def create_quantiles(self):
         """
         """
-        if self._quantiles is None:
-            self._quantiles = Quantiles(self)
+        if self._quartiles is None:
+            self._quartiles = Quantiles(self)
     
     def create_outliers(self):
         """
@@ -150,6 +155,9 @@ class Textiles(TextilesBase):
         return None
 
 
+########################################################################################################################
+
+
 class Balanced(TextilesBase):
     """
     Textiles class for "balanced" textiles;
@@ -161,6 +169,9 @@ class Balanced(TextilesBase):
         pass
 
 
+########################################################################################################################
+
+
 class Unbalanced(TextilesBase):
     """
     Textiles class for "unbalanced" textiles;
@@ -170,6 +181,9 @@ class Unbalanced(TextilesBase):
         """
         """
         pass
+
+
+########################################################################################################################
 
 
 class Quantiles:
@@ -195,6 +209,9 @@ class Quantiles:
     def quantile(self):
         """
         """
+
+
+########################################################################################################################
 
 
 class Outliers:
