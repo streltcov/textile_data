@@ -1,0 +1,27 @@
+,order,grave,add,z,internal_storage,number,warp_size,weft_size,type,item_no,structure,condition,weaving_technique,warp_material,weft_material,warp_dyed,weft_dyed,twist_warp,twist_weft,angle_warp,angle_weft,even (равномерность — фактор),cover factor,selvedge,warp_a,warp_b,warp_thick_mean,weft_a,weft_b,weft_mean,warp_dens,weft_dens,warp_nominal,weft_nominal,warp_weft,density_coefficient
+23,23.0,95,0.0,1.0,2007-0050-009,,100,50,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.5,"0,4",52.0,17.0,0.25,0.4,3.06,3.06
+35,34.0,133,0.0,0.0,2010- 0001-001,,100,70,sewn_item,2,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.2,"0,25",0.3,0.4,"0,35",36.0,13.0,0.2,0.35,2.77,2.77
+49,46.0,133,0.0,0.0,2008-0036-002,,230,130,fabric,2,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",12.0,10.0,0.25,0.35,1.2,1.2
+79,74.0,159,0.0,1.0,2008-0001-004-05,,30,85,fabric,1,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.3,"0,25",18.0,13.0,0.25,0.25,1.38,1.38
+83,78.0,"160, 165-167",0.0,0.0,2008-002-010-01,,500,25,n_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,loose,loose,,,,0.2,0.3,"0,25",0.1,0.2,"0,15",42.0,16.0,0.25,0.15,2.62,2.62
+91,84.0,162,0.0,1.0,2008-006-007-01,,150,75,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.3,"0,25",30.0,10.0,0.25,0.25,3.0,3.0
+92,85.0,162,0.0,1.0,2008-006-007-02,,80,85,nakladka,0,mono,intact,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",26.0,13.0,0.25,0.35,2.0,2.0
+93,86.0,162,0.0,1.0,2008-006-007-03,,70,130,textile,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",26.0,13.0,0.25,0.35,2.0,2.0
+94,87.0,162,0.0,1.0,2008-006-007-04,,110,30,n_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.3,"0,25",30.0,10.0,0.25,0.25,3.0,3.0
+95,88.0,162,0.0,1.0,2008-006-007-06,,30,180,n_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.3,"0,25",28.0,10.0,0.25,0.25,2.8,2.8
+98,90.0,163,0.0,1.0,2008-008-001-03-2,,80,50,funeral_shroud,2,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.3,"0,25",20.0,10.0,0.25,0.25,2.0,2.0
+99,91.0,163,0.0,1.0,2008-008-03,,100,25,n_band,1,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.2,"0,2",44.0,13.0,0.25,0.2,3.38,3.38
+100,91.0,163,0.0,1.0,2008-008-03,,850,25,n_band,2,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.2,"0,2",44.0,13.0,0.25,0.2,3.38,3.38
+101,91.0,163,0.0,1.0,2008-008-03,,380,25,n_band,3,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.2,"0,2",44.0,13.0,0.25,0.2,3.38,3.38
+102,91.0,163,0.0,1.0,2008-008-03,,210,25,n_band,4,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.2,"0,2",44.0,13.0,0.25,0.2,3.38,3.38
+103,91.0,163,0.0,1.0,2008-008-03,,180,25,n_band,5,composite,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.2,"0,2",44.0,13.0,0.25,0.2,3.38,3.38
+106,94.0,163,0.0,1.0,2008-008-07,,100,100,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",20.0,10.0,0.25,0.35,2.0,2.0
+137,,181-183,,,2008-0028-010-02,,200,30,n_band,0,mono,fragment,basket,linen,linen,,,S,S,uneven,uneven,,,,0.2,0.3,,0.2,0.3,,10.0,8.0,0.25,0.25,1.25,1.25
+166,137.0,182,0.0,1.0,2008-0028-005-14,,100,60,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",42.0,15.0,0.25,0.35,2.8,2.8
+198,155.0,196,3.0,0.0,2008-0070-003-03,,110,20,w_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,loose,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",26.0,12.0,0.25,0.35,2.17,2.17
+199,156.0,196,3.0,0.0,2008-0070-003-04,,200,100,w_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,loose,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",40.0,20.0,0.25,0.35,2.0,2.0
+211,163.0,196,3.0,0.0,2008-0070-003-14,,85,30,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",48.0,10.0,0.25,0.35,4.8,4.8
+213,165.0,196,3.0,0.0,2008-0070-003-16,,230,50,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",52.0,12.0,0.25,0.35,4.33,4.33
+220,171.0,196,3.0,0.0,2008-0070-003-23,,110,50,m_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.5,"0,4",52.0,14.0,0.25,0.4,3.71,3.71
+222,173.0,196,3.0,0.0,2008-0070-003-25,,220,25,n_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.3,0.4,"0,35",50.0,10.0,0.25,0.35,5.0,5.0
+230,176.0,200,0.0,1.0,2008-0118-006,,720,38,n_band,0,mono,fragment,tabby,linen,linen,no,no,S,S,medium,medium,,,,0.2,0.3,"0,25",0.2,0.3,"0,25",42.0,10.0,0.25,0.25,4.2,4.2
