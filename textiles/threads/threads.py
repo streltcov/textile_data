@@ -83,3 +83,30 @@ cleared = textiles[textiles.weft_nominal < wefts_outliers_upper_border]
 outliers_percent = round(((len(textiles) - len(cleared)) / len(textiles)) * 100, 3)
 
 ########################################################################################################################
+
+cleared_warps = cleared.warp_nominal
+cleared_wefts = cleared.weft_nominal
+
+########################################################################################################################
+
+# cleared dataframe -> warps -> central tendency;
+cleared_warps_mean = round(cleared_warps.mean(), 3)
+cleared_warps_median = round(cleared_warps.median(), 3)
+cleared_warps_mode = round(cleared_warps.mode()[0], 3)
+cleared_warps_min = round(cleared_warps.min(), 3)
+cleared_warps_max = round(cleared_warps.max(), 3)
+cleared_warps_range = round(cleared_warps_max - cleared_warps_min, 3)
+cleared_Warps_q1, cleared_warps_q3 = cleared.warp_nominal.quantile([0.25, 0.75])
+
+########################################################################################################################
+
+# cleared dataframe -> wefts -> central tendency;
+cleared_wefts_mean = round(cleared_wefts.mean(), 3)
+cleared_wefts_median = round(cleared_wefts.median(), 3)
+cleared_wefts_mode = round(cleared_wefts.mode()[0], 3)
+cleared_wefts_min = round(cleared_wefts.min(), 3)
+cleared_wefts_max = round(cleared_wefts.max(), 3)
+cleared_wefts_range = round(cleared_wefts_max - cleared_wefts_min, 3)
+cleared_wefts_q1, cleared_wefts_q3 = cleared.weft_nominal.quantile([0.25, 0.75])
+
+########################################################################################################################
