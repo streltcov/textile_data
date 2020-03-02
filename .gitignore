@@ -1,4 +1,9 @@
 .DS_Store
 .idea/
 example.py
+.ipynb_checkpoints/
+textiles/.ipynb_checkpoints/
+textiles/__pycache__/
+textiles/densities/__pycache__/
+textiles/threads/__pycache__/
 data/__pycache__/
