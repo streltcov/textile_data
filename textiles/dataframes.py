@@ -48,3 +48,7 @@ textiles['warp_weft'] = round((textiles['warp_dens'] / textiles['weft_dens']), 2
 textiles['density_coefficient'] = round((textiles['warp_dens'] / textiles['weft_dens']), 2)
 
 ########################################################################################################################
+
+textiles['warp_weft_coefficient'] = round((textiles['warp_nominal'] / textiles['weft_nominal']), 3)
+
+print(textiles['warp_weft_coefficient'])

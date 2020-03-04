@@ -2,6 +2,7 @@
 
 """
 
+import pandas
 from textiles.dataframes import textiles
 
 ########################################################################################################################
@@ -70,10 +71,6 @@ wefts_cleared = textiles[textiles.weft_nominal < wefts_outliers_upper_border]
 
 ########################################################################################################################
 
-# outliers = ''
-
-########################################################################################################################
-
 # dataframe cleared from all outliers;
 cleared = textiles[textiles.warp_nominal > warps_outliers_lower_border]
 cleared = textiles[textiles.warp_nominal < warps_outliers_upper_border]
@@ -81,6 +78,11 @@ cleared = textiles[textiles.weft_nominal > wefts_outliers_lower_border]
 cleared = textiles[textiles.weft_nominal < wefts_outliers_upper_border]
 
 outliers_percent = round(((len(textiles) - len(cleared)) / len(textiles)) * 100, 3)
+
+########################################################################################################################
+
+outliers = pandas.concat([textiles, cleared]).drop_duplicates(keep=False)
+# wefts_outliers = pandas.merge()
 
 ########################################################################################################################
 
