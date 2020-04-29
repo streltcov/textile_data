@@ -45,10 +45,30 @@ textiles['warp_weft'] = round((textiles['warp_dens'] / textiles['weft_dens']), 2
 ########################################################################################################################
 
 # Добавление признака density_coefficient;
-textiles['density_coefficient'] = round((textiles['warp_dens'] / textiles['weft_dens']), 2)
+textiles['density_ratio'] = round((textiles['warp_dens'] / textiles['weft_dens']), 2)
 
 ########################################################################################################################
 
-textiles['warp_weft_coefficient'] = round((textiles['warp_nominal'] / textiles['weft_nominal']), 3)
+textiles['thick_ratio'] = round((textiles['warp_nominal'] / textiles['weft_nominal']), 3)
 
-print(textiles['warp_weft_coefficient'])
+########################################################################################################################
+
+# QUALITY GROUPS
+
+# Group A: warp-faced tabby with warp count less than 15 yarns per cm and average yarn diameter about 0.5-0.8 for warps
+# and 0.6-0.9 for wefts; the ratio of warps to wefts is 1 to 2;
+
+group_A = textiles.query('warp_dens <= 15 and warp_nominal > 0.5 and warp_nominal < 0.8 and weft_nominal > 0.6 and weft_nominal < 0.9')
+
+# Group B: Warp-faced tabby with warp count 16-29 and average yarn diameter about 0.3-0.6 for warps and 0.3-0.6
+# for wefts; the ratio of warps to wefts is 1 to 2 or less;
+
+group_B = textiles.query('warp_dens > 16 and warp_dens <= 29 and warp_nominal > 0.3 and warp_nominal < 0.5 and weft_nominal > 0.3 and weft_nominal < 0.6')
+
+# Group C: Warp-faced tabby with a warp count of more than 30 yarns per cm and average yarn diameter
+
+group_C = textiles.query('warp_dens >= 30')
+
+group_D = pandas.concat([textiles, group_A, group_B, group_C]).drop_duplicates(keep=False)
+
+########################################################################################################################
