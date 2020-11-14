@@ -3,6 +3,7 @@
 example.py
 .ipynb_checkpoints/
 textiles/.ipynb_checkpoints/
+__pycache__/
 textiles/__pycache__/
 textiles/densities/__pycache__/
 textiles/threads/__pycache__/
