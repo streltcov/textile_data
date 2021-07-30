@@ -52,3 +52,20 @@ print(warp_dens_2)
 print("Group 3:")
 print(warp_nominal_3)
 print(warp_dens_3)
+
+columns = ['warp_nominal', 'weft_nominal', 'warp_dens', 'weft_dens']
+
+index_1 = range(0, size)
+# index_2 = range()
+# index_3 = range()
+
+df_1 = pd.DataFrame()
+# df_2 = pd.DataFrame()
+# df_3 = pd.DataFrame()
+
+# df = None
+
+# print(df)
+
+filename = str(input())
+# df.to_csv(filename)
